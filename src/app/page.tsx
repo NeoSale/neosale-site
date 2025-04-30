@@ -122,9 +122,9 @@ export default function Home() {
               </div>
             </div>
             <p className="text-gray-800">
-              "Desde que implementamos o NeoCalendar, reduzimos nossas faltas em mais de 60%. 
+              &ldquo;Desde que implementamos o NeoCalendar, reduzimos nossas faltas em mais de 60%. 
               O sistema de lembretes automáticos é fantástico e nossos clientes adoram a facilidade 
-              de confirmar ou reagendar pelo WhatsApp."
+              de confirmar ou reagendar pelo WhatsApp.&rdquo;
             </p>
           </div>
 
@@ -140,9 +140,9 @@ export default function Home() {
               </div>
             </div>
             <p className="text-gray-800">
-              "O NeoFollow revolucionou nosso pós-atendimento. Conseguimos acompanhar 
+              &quot;O NeoFollow revolucionou nosso pós-atendimento. Conseguimos acompanhar 
               os resultados dos tratamentos de forma automatizada e nossos pacientes 
-              se sentem muito mais cuidados e valorizados."
+              se sentem muito mais cuidados e valorizados.&quot;
             </p>
           </div>
 
@@ -158,9 +158,9 @@ export default function Home() {
               </div>
             </div>
             <p className="text-gray-800">
-              "A inteligência artificial do NeoAI nos ajudou a otimizar nossos protocolos 
+              &quot;A inteligência artificial do NeoAI nos ajudou a otimizar nossos protocolos 
               de tratamento. Conseguimos resultados melhores em menos sessões, o que 
-              aumentou significativamente a satisfação dos nossos clientes."
+              aumentou significativamente a satisfação dos nossos clientes.&quot;
             </p>
           </div>
         </div>

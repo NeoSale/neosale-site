@@ -2,7 +2,6 @@ import React from 'react';
 import Section from '@/components/ui/Section';
 import Button from '@/components/ui/Button';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
-import Image from 'next/image';
 
 export default function ProdutosPage() {
   return (
