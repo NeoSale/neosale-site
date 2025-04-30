@@ -34,3 +34,42 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Usando Docker
+
+### Construindo a Imagem
+
+Para construir a imagem Docker do site:
+
+```bash
+docker build -t neosale-site .
+```
+
+### Executando o Container
+
+Para executar o site em um container Docker:
+
+```bash
+docker run -p 3000:3000 neosale-site
+```
+
+Acesse o site em [http://localhost:3000](http://localhost:3000).
+
+### Publicando a Imagem
+
+Para publicar a imagem em um registro Docker:
+
+```bash
+# Faça login no registro (exemplo com Docker Hub)
+docker login
+
+# Tague a imagem
+docker tag neosale-site seu-usuario/neosale-site:latest
+
+# Envie a imagem para o registro
+docker push seu-usuario/neosale-site:latest
+```
+
+## Implantação
+
+Este site pode ser implantado em qualquer plataforma que suporte Next.js, como Vercel, Netlify, ou usando o Docker em serviços como AWS, Google Cloud ou Azure.
