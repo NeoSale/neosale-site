@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '@/components/ui/Section';
-import Button from '@/components/ui/Button';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
+import PrimaryButton from '@/components/ui/PrimaryButton';
 
 export default function ContatoPage() {
   return (
@@ -157,9 +157,9 @@ export default function ContatoPage() {
                   ></textarea>
                 </div>
 
-                <Button variant="primary" className="w-full">
+                <PrimaryButton className="w-full">
                   Enviar mensagem
-                </Button>
+                </PrimaryButton>
               </form>
             </div>
           </div>

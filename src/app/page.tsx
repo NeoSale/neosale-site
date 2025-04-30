@@ -8,8 +8,19 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <Section background="primary" className="py-20">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+      <Section background="primary" className="py-20 relative overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 w-full h-full">
+          <Image 
+            src="/images/banner.png" 
+            alt="Dashboard NeoSale Background" 
+            fill
+            style={{ objectFit: 'cover' }}
+            priority
+          />
+        </div>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div>
             <div className="mb-6">
               <Image 
@@ -20,10 +31,10 @@ export default function Home() {
                 className="h-24 w-auto"
               />
             </div>
-            <h1 className="text-4xl md:text-5xl mb-6 text-gray-600">
+            <h1 className="text-4xl md:text-5xl mb-6 text-white">
               Automação de IA para <span className="font-bold">Clínicas de Estética</span>
             </h1>
-            <p className="text-gray-600 text-lg mb-8">
+            <p className="text-white text-lg mb-8">
               Transforme sua clínica com nossas soluções inteligentes de agendamento, 
               acompanhamento de clientes e automação de marketing.
             </p>
@@ -32,15 +43,6 @@ export default function Home() {
               <PrimaryButton href="/produtos" large>
                 Conhecer produtos
               </PrimaryButton>
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <div className="bg-white/10 p-6 rounded-xl backdrop-blur-sm">
-              <div className="aspect-[4/3] relative bg-white/5 rounded-lg overflow-hidden">
-                <div className="absolute inset-0 flex items-center justify-center text-white/30">
-                  Imagem do dashboard NeoSale
-                </div>
-              </div>
             </div>
           </div>
         </div>

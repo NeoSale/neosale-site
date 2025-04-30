@@ -1,7 +1,7 @@
 import React from 'react';
 import Section from '@/components/ui/Section';
-import Button from '@/components/ui/Button';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
+import PrimaryButton from '@/components/ui/PrimaryButton';
 
 export default function SobrePage() {
   return (
@@ -216,9 +216,9 @@ export default function SobrePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton text="Agendar uma conversa" large className="sm:px-8" />
-            <Button href="/produtos" variant="primary" size="lg">
+            <PrimaryButton href="/produtos" size="lg">
               Conhecer produtos
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
       </Section>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Section from '@/components/ui/Section';
-import Button from '@/components/ui/Button';
+import PrimaryButton from '@/components/ui/PrimaryButton';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 export default function PlanosPage() {
@@ -35,7 +35,7 @@ export default function PlanosPage() {
                 <span className="text-4xl font-bold">R$299</span>
                 <span className="text-gray-500">/mês</span>
               </div>
-              <Button href="#" variant="primary" className="w-full mb-6">Começar agora</Button>
+              <PrimaryButton href="#" className="w-full mb-6">Começar agora</PrimaryButton>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -77,7 +77,7 @@ export default function PlanosPage() {
                 <span className="text-4xl font-bold">R$599</span>
                 <span className="text-gray-500">/mês</span>
               </div>
-              <Button href="#" variant="primary" className="w-full mb-6">Escolher plano</Button>
+              <PrimaryButton href="#" className="w-full mb-6">Escolher plano</PrimaryButton>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -122,7 +122,7 @@ export default function PlanosPage() {
                 <span className="text-4xl font-bold">R$999</span>
                 <span className="text-gray-500">/mês</span>
               </div>
-              <Button href="#" variant="primary" className="w-full mb-6">Falar com consultor</Button>
+              <PrimaryButton href="#" className="w-full mb-6">Falar com consultor</PrimaryButton>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -280,9 +280,9 @@ export default function PlanosPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton text="Falar com um consultor" large className="sm:px-8" />
-            <Button href="/contato" variant="primary" size="lg">
+            <PrimaryButton href="/contato" size="lg">
               Entre em contato
-            </Button>
+            </PrimaryButton>
           </div>
         </div>
       </Section>
