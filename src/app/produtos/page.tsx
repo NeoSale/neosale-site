@@ -60,7 +60,7 @@ export default function ProdutosPage() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <WhatsAppButton text="Agendar demonstração" />
-              <Button href="/planos" variant="outline">Ver planos</Button>
+              <Button href="/planos" variant="primary">Ver planos</Button>
             </div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -123,7 +123,7 @@ export default function ProdutosPage() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <WhatsAppButton text="Agendar demonstração" />
-              <Button href="/planos" variant="outline">Ver planos</Button>
+              <Button href="/planos" variant="primary">Ver planos</Button>
             </div>
           </div>
         </div>
@@ -172,7 +172,7 @@ export default function ProdutosPage() {
             
             <div className="flex flex-col sm:flex-row gap-4">
               <WhatsAppButton text="Agendar demonstração" />
-              <Button href="/planos" variant="outline">Ver planos</Button>
+              <Button href="/planos" variant="primary">Ver planos</Button>
             </div>
           </div>
           <div className="bg-white p-6 rounded-xl shadow-lg">
@@ -194,7 +194,7 @@ export default function ProdutosPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WhatsAppButton text="Falar com um consultor" large className="sm:px-8" />
-            <Button href="/planos" variant="outline" size="lg" className="bg-white text-primary hover:bg-white/90">
+            <Button href="/planos" variant="primary" size="lg">
               Conhecer planos
             </Button>
           </div>

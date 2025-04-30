@@ -66,7 +66,7 @@ export default function Home() {
             <p className="text-gray-600 mb-4">
               Sistema inteligente de agendamento que otimiza sua agenda e reduz faltas com lembretes automáticos.
             </p>
-            <Button href="/produtos#neocalendar" variant="outline">Saiba mais</Button>
+            <Button href="/produtos#neocalendar"  variant="primary">Saiba mais</Button>
           </div>
 
           {/* NeoFollow */}
@@ -80,7 +80,7 @@ export default function Home() {
             <p className="text-gray-600 mb-4">
               Acompanhamento personalizado de clientes com comunicação automatizada e relatórios de progresso.
             </p>
-            <Button href="/produtos#neofollow" variant="outline">Saiba mais</Button>
+            <Button href="/produtos#neofollow" variant="primary">Saiba mais</Button>
           </div>
 
           {/* NeoAI */}
@@ -95,7 +95,7 @@ export default function Home() {
             <p className="text-gray-600 mb-4">
               Inteligência artificial que analisa dados e gera insights para otimizar seus tratamentos e resultados.
             </p>
-            <Button href="/produtos#neoai" variant="outline">Saiba mais</Button>
+            <Button href="/produtos#neoai" variant="primary">Saiba mais</Button>
           </div>
         </div>
       </Section>
