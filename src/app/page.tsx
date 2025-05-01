@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Button from "@/components/ui/Button";
 import Section from "@/components/ui/Section";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 import PrimaryButton from "@/components/ui/PrimaryButton";
