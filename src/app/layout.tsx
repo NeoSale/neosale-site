@@ -16,7 +16,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "NeoSale | Automação de IA para Clínicas de Estética",
+  title: "NeoSale | Nova Era de Vendas Automatizadas com IA",
   description: "Ferramentas inteligentes para impulsionar sua clínica de estética: NeoCalendar, NeoFollow e mais.",
 };
 

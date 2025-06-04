@@ -4,11 +4,12 @@ interface WhatsAppButtonProps {
   text?: string;
   className?: string;
   large?: boolean;
+  phoneNumber?: string;
 }
 
-export default function WhatsAppButton({ text = "Fale conosco", className = "", large = false }: WhatsAppButtonProps) {
-  // Número de WhatsApp ainda não configurado, usando um placeholder
-  const whatsappLink = "https://wa.me/5500000000000";
+export default function WhatsAppButton({ text = "Fale conosco", className = "", large = false, phoneNumber = "5511999999999" }: WhatsAppButtonProps) {
+  // Construir o link do WhatsApp com o número fornecido (sem formatação)
+  const whatsappLink = `https://wa.me/${phoneNumber}`;
   
   return (
     <a 

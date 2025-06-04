@@ -37,7 +37,7 @@ export default function Header() {
           </nav>
           
           <div className="hidden md:block">
-            <WhatsAppButton text="Fale conosco" />
+            <WhatsAppButton text="Fale conosco" phoneNumber="5511992761075"/>
           </div>
           
           <button className="md:hidden text-gray-800">
