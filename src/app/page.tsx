@@ -58,48 +58,48 @@ export default function Home() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {/* White Label para Agências */}
+          {/* Agentes por Nicho */}
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="h-16 w-16 bg-[#403CCF]/10 rounded-lg flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#403CCF]">
-                <path d="M11.644 1.59a.75.75 0 01.712 0l9.75 5.25a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.712 0l-9.75-5.25a.75.75 0 010-1.32l9.75-5.25z" />
-                <path d="M3.265 10.602l7.668 4.129a2.25 2.25 0 002.134 0l7.668-4.13 1.37.739a.75.75 0 010 1.32l-9.75 5.25a.75.75 0 01-.71 0l-9.75-5.25a.75.75 0 010-1.32l1.37-.738z" />
-                <path d="M10.933 19.231l-7.668-4.13-1.37.739a.75.75 0 000 1.32l9.75 5.25c.221.12.489.12.71 0l9.75-5.25a.75.75 0 000-1.32l-1.37-.738-7.668 4.13a2.25 2.25 0 01-2.134-.001z" />
+                <path fillRule="evenodd" d="M8.25 6.75a3.75 3.75 0 117.5 0 3.75 3.75 0 01-7.5 0zM15.75 9.75a3 3 0 116 0 3 3 0 01-6 0zM2.25 9.75a3 3 0 116 0 3 3 0 01-6 0zM6.31 15.117A6.745 6.745 0 0112 12a6.745 6.745 0 016.709 7.498.75.75 0 01-.372.568A12.696 12.696 0 0112 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 01-.372-.568 6.787 6.787 0 011.019-4.38z" clipRule="evenodd" />
+                <path d="M5.082 14.254a8.287 8.287 0 00-1.308 5.135 9.687 9.687 0 01-1.764-.44l-.115-.04a.563.563 0 01-.373-.487l-.01-.121a3.75 3.75 0 013.57-4.047zM20.226 19.389a8.287 8.287 0 00-1.308-5.135 3.75 3.75 0 013.57 4.047l-.01.121a.563.563 0 01-.373.486l-.115.04c-.567.2-1.156.349-1.764.441z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-gray-800">White Label para Agências</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-800">Agentes de IA por Nicho <span className="text-sm font-normal bg-blue-100 text-blue-800 px-2 py-1 rounded-full ml-2">Produtos</span></h3>
             <p className="text-gray-600 mb-6 text-lg">
-              Ofereça soluções de IA e automação com sua própria marca. Cadastramento de clientes, automações prontas e personalização completa.
+              Soluções especializadas para setores específicos: Jurídico, Imobiliário, Financeiro e mais. Cada agente é treinado para resolver desafios únicos do seu setor.
             </p>
-            <PrimaryButton href="/produtos#white-label" size="lg">Conhecer solução</PrimaryButton>
+            <PrimaryButton href="/produtos" size="lg">Ver soluções por nicho</PrimaryButton>
           </div>
 
-          {/* ClaraNutri */}
+          {/* Marketing Digital */}
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="h-16 w-16 bg-[#403CCF]/10 rounded-lg flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#403CCF]">
-                <path d="M4.5 6.375a4.125 4.125 0 118.25 0 4.125 4.125 0 01-8.25 0zM14.25 8.625a3.375 3.375 0 116.75 0 3.375 3.375 0 01-6.75 0zM1.5 19.125a7.125 7.125 0 0114.25 0v.003l-.001.119a.75.75 0 01-.363.63 13.067 13.067 0 01-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 01-.364-.63l-.001-.122zM17.25 19.128l-.001.144a2.25 2.25 0 01-.233.96 10.088 10.088 0 005.06-1.01.75.75 0 00.42-.643 4.875 4.875 0 00-6.957-4.611 8.586 8.586 0 011.71 5.157v.003z" />
+                <path fillRule="evenodd" d="M9.315 7.584C12.195 3.883 16.695 1.5 21.75 1.5a.75.75 0 01.75.75c0 5.056-2.383 9.555-6.084 12.436A6.75 6.75 0 019.75 22.5a.75.75 0 01-.75-.75v-4.131A15.838 15.838 0 016.382 15H2.25a.75.75 0 01-.75-.75 6.75 6.75 0 017.815-6.666zM15 6.75a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z" clipRule="evenodd" />
+                <path d="M5.26 17.242a.75.75 0 10-.897-1.203 5.243 5.243 0 00-2.05 5.022.75.75 0 00.625.627 5.243 5.243 0 005.022-2.051.75.75 0 10-1.202-.897 3.744 3.744 0 01-3.008 1.51c0-1.23.592-2.323 1.51-3.008z" />
               </svg>
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-gray-800">Clara Nutri <span className="text-sm font-normal bg-green-100 text-green-800 px-2 py-1 rounded-full ml-2">Case Real</span></h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-800">Marketing Digital <span className="text-sm font-normal bg-blue-100 text-blue-800 px-2 py-1 rounded-full ml-2">Produtos</span></h3>
             <p className="text-gray-600 mb-6 text-lg">
-              Assistente com IA para nutricionistas oferecerem aos pacientes. Já em operação e com resultados comprovados.
+              Agentes de IA para tráfego pago e social media. Otimização de campanhas, criação de conteúdo para redes sociais e relatórios automáticos com controle via WhatsApp.
             </p>
-            <PrimaryButton href="/produtos#claraNutri" size="lg">Ver case</PrimaryButton>
+            <PrimaryButton href="/produtos" size="lg">Ver soluções de marketing</PrimaryButton>
           </div>
-
-          {/* Consultoria em IA */}
+          
+          {/* Ferramentas Complementares */}
           <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
             <div className="h-16 w-16 bg-[#403CCF]/10 rounded-lg flex items-center justify-center mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8 text-[#403CCF]">
-                <path fillRule="evenodd" d="M2.25 5.25a3 3 0 013-3h13.5a3 3 0 013 3V15a3 3 0 01-3 3h-3v.257c0 .597.237 1.17.659 1.591l.621.622a.75.75 0 01-.53 1.28h-9a.75.75 0 01-.53-1.28l.621-.622a2.25 2.25 0 00.659-1.59V18h-3a3 3 0 01-3-3V5.25zm1.5 0v9.75c0 .83.67 1.5 1.5 1.5h13.5c.83 0 1.5-.67 1.5-1.5V5.25c0-.83-.67-1.5-1.5-1.5H5.25c-.83 0-1.5.67-1.5 1.5z" clipRule="evenodd" />
+                <path fillRule="evenodd" d="M12 6.75a5.25 5.25 0 016.775-5.025.75.75 0 01.313 1.248l-3.32 3.319c.063.475.276.934.641 1.299.365.365.824.578 1.3.64l3.318-3.319a.75.75 0 011.248.313 5.25 5.25 0 01-5.472 6.756c-1.018-.086-1.87.1-2.309.634L7.344 21.3A3.298 3.298 0 112.7 16.657l8.684-7.151c.533-.44.72-1.291.634-2.309A5.342 5.342 0 0112 6.75zM4.117 19.125a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75h-.008a.75.75 0 01-.75-.75v-.008z" clipRule="evenodd" />
               </svg>
             </div>
-            <h3 className="text-2xl font-semibold mb-3 text-gray-800">Consultoria em IA</h3>
+            <h3 className="text-2xl font-semibold mb-3 text-gray-800">Ferramentas Complementares <span className="text-sm font-normal bg-blue-100 text-blue-800 px-2 py-1 rounded-full ml-2">Produtos</span></h3>
             <p className="text-gray-600 mb-6 text-lg">
-              Projeto sob medida com estratégia, automação e execução para pequenas e médias empresas que querem automatizar processos.
+              Soluções que potencializam seus resultados: NeoFollow para pós-atendimento, NeoCalendar para agendamentos e NeoAI para análise de dados e insights.
             </p>
-            <PrimaryButton href="/produtos#consultoria" size="lg">Ver detalhes</PrimaryButton>
+            <PrimaryButton href="/produtos" size="lg">Ver ferramentas</PrimaryButton>
           </div>
         </div>
       </Section>
