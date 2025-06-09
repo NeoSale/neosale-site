@@ -2,7 +2,6 @@ import React from 'react';
 import Section from '@/components/ui/Section';
 import WhatsAppButton from '@/components/ui/WhatsAppButton';
 import PrimaryButton from '@/components/ui/PrimaryButton';
-import Image from 'next/image';
 
 export default function TrafegoPagoPage() {
   return (
