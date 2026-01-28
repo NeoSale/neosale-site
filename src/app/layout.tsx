@@ -1,23 +1,42 @@
 import type { Metadata } from "next";
-import { Poppins, Inter } from "next/font/google";
-import "./globals.css";
-import MainLayout from "@/components/layout/MainLayout";
+import { Poppins } from "next/font/google";
+import "@/styles/globals.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { WhatsAppFloat } from "@/components/layout/WhatsAppFloat";
 
 const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
-});
-
-const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
-  title: "NeoSale | Nova Era de Vendas Automatizadas com IA",
-  description: "Ferramentas inteligentes para impulsionar sua clínica de estética: NeoCalendar, NeoFollow e mais.",
+  title: "NeoSale AI | Automação de Vendas no WhatsApp com IA",
+  description:
+    "Transforme seu WhatsApp em uma máquina de vendas 24/7. Agentes de IA que respondem em 30 segundos, qualificam leads e agendam reuniões automaticamente.",
+  keywords:
+    "automação whatsapp, ia vendas, chatbot whatsapp, sdr ia, vendas automatizadas, neosale",
+  authors: [{ name: "NeoSale AI" }],
+  openGraph: {
+    title: "NeoSale AI | Automação de Vendas no WhatsApp com IA",
+    description:
+      "Transforme seu WhatsApp em uma máquina de vendas 24/7. Agentes de IA que respondem em 30 segundos, qualificam leads e agendam reuniões automaticamente.",
+    url: "https://neosaleai.com.br",
+    siteName: "NeoSale AI",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NeoSale AI | Automação de Vendas no WhatsApp com IA",
+    description:
+      "Transforme seu WhatsApp em uma máquina de vendas 24/7. Agentes de IA que respondem em 30 segundos, qualificam leads e agendam reuniões automaticamente.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
@@ -26,13 +45,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="dark">
       <body
-        className={`${poppins.variable} ${inter.variable} font-poppins antialiased`}
+        className={`${poppins.variable} antialiased`}
       >
-        <MainLayout>
-          {children}
-        </MainLayout>
+        <Header />
+        <main>{children}</main>
+        <Footer />
+        <WhatsAppFloat />
       </body>
     </html>
   );

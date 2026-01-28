@@ -1,75 +1,87 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NeoSale Site
 
-## Getting Started
+Site institucional da NeoSale AI - Plataforma de automação de vendas e atendimento via WhatsApp com agentes de IA especializados.
 
-First, run the development server:
+## 🚀 Tecnologias
+
+- **Framework:** Next.js 15 (App Router)
+- **UI:** React 19 + TypeScript
+- **Estilização:** Tailwind CSS 4
+- **Animações:** Framer Motion
+- **Ícones:** Lucide React
+- **Fontes:** Geist Sans (Google Fonts)
+- **Deploy:** Vercel
+
+## 📁 Estrutura
+
+```
+neosale-site/
+├── src/
+│   ├── app/                    # App Router (Next.js 15)
+│   │   ├── layout.tsx          # Layout raiz
+│   │   ├── page.tsx            # Home (landing page)
+│   │   ├── contato/            # Página de contato
+│   │   ├── politica-de-privacidade/
+│   │   └── termos-de-uso/
+│   │
+│   ├── components/
+│   │   ├── layout/             # Header, Footer, ThemeToggle
+│   │   ├── sections/           # Seções da landing page
+│   │   └── ui/                 # Componentes reutilizáveis
+│   │
+│   ├── lib/                    # Utilitários
+│   └── styles/                 # Estilos globais
+│
+├── public/                     # Assets estáticos
+└── package.json
+```
+
+## 🎨 Design System
+
+### Cores
+- **Primary:** `#403CCF` (azul roxo)
+- **Primary Light:** `#5B59E8`
+- **Primary Dark:** `#2d2a9c`
+- **Background Light:** `#FBFAFF`
+- **Background Dark:** `#0f1629`
+
+### Componentes
+- `Button` - Botões com variantes (primary, secondary, outline, ghost)
+- `Card` - Cards com variantes (default, glass, bordered)
+- `Badge` - Badges para tags e status
+- `Container` - Container responsivo
+- `Accordion` - FAQ accordion animado
+- `SectionTitle` - Títulos de seção padronizados
+
+## 🛠️ Desenvolvimento
 
 ```bash
+# Instalar dependências
+npm install
+
+# Rodar em desenvolvimento
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+# Build de produção
+npm run build
+
+# Iniciar produção
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📱 Páginas
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `/` - Landing page principal
+- `/contato` - Formulário de contato
+- `/politica-de-privacidade` - Política LGPD
+- `/termos-de-uso` - Termos de uso
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔗 Links Importantes
 
-## Learn More
+- **Demo:** https://lp.neosaleai.com.br
+- **CRM:** https://crm.neosaleai.com.br
+- **Site:** https://neosaleai.com.br
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 Licença
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## Usando Docker
-
-### Construindo a Imagem
-
-Para construir a imagem Docker do site:
-
-```bash
-docker build -t neosale-site .
-```
-
-### Executando o Container
-
-Para executar o site em um container Docker:
-
-```bash
-docker run -p 3000:3000 neosale-site
-```
-
-Acesse o site em [http://localhost:3000](http://localhost:3000).
-
-### Publicando a Imagem
-
-Para publicar a imagem em um registro Docker:
-
-```bash
-# Faça login no registro (exemplo com Docker Hub)
-docker login
-
-# Tague a imagem
-docker tag neosale-site seu-usuario/neosale-site:latest
-
-# Envie a imagem para o registro
-docker push seu-usuario/neosale-site:latest
-```
-
-## Implantação
-
-Este site pode ser implantado em qualquer plataforma que suporte Next.js, como Vercel, Netlify, ou usando o Docker em serviços como AWS, Google Cloud ou Azure.
+© 2025 NeoSale AI. Todos os direitos reservados.

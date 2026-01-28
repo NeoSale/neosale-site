@@ -1,51 +1,48 @@
-import React from 'react';
-import Link from 'next/link';
+"use client";
 
-interface ButtonProps {
-  children: React.ReactNode;
-  href?: string;
-  variant?: 'primary' | 'secondary' | 'outline' | 'white';
-  size?: 'sm' | 'md' | 'lg';
-  className?: string;
-  onClick?: () => void;
+import { cn } from "@/lib/utils";
+import { forwardRef } from "react";
+
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  variant?: "primary" | "secondary" | "outline" | "ghost";
+  size?: "sm" | "md" | "lg";
+  asChild?: boolean;
 }
 
-export default function Button({
-  children,
-  href,
-  variant = 'primary',
-  size = 'md',
-  className = '',
-  onClick,
-}: ButtonProps) {
-  const baseStyles = 'inline-flex items-center justify-center rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2';
-  
-  const variantStyles = {
-    primary: 'bg-primary hover:bg-primary/90 text-white focus:ring-primary/50',
-    secondary: 'bg-gray-800 hover:bg-gray-700 text-white focus:ring-gray-500',
-    outline: 'border border-primary text-primary hover:bg-primary/10 focus:ring-primary/40',
-    white: 'bg-white border border-gray-300 text-gray-800 hover:bg-gray-50 focus:ring-gray-300'
-  };
-  
-  const sizeStyles = {
-    sm: 'text-sm px-3 py-1.5',
-    md: 'text-base px-4 py-2',
-    lg: 'text-lg px-6 py-3'
-  };
-  
-  const styles = `${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
-  
-  if (href) {
+const Button = forwardRef<HTMLButtonElement, ButtonProps>(
+  ({ className, variant = "primary", size = "md", children, ...props }, ref) => {
+    const baseStyles =
+      "inline-flex items-center justify-center font-medium transition-all duration-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 disabled:opacity-50 disabled:cursor-not-allowed";
+
+    const variants = {
+      primary:
+        "bg-primary text-white hover:bg-primary-light shadow-lg shadow-primary/25 hover:shadow-primary/40",
+      secondary:
+        "bg-bg-card-dark text-text-light hover:bg-bg-card-dark/80 border border-border-dark",
+      outline:
+        "border-2 border-primary text-primary hover:bg-primary hover:text-white",
+      ghost: "text-text-light hover:bg-white/10",
+    };
+
+    const sizes = {
+      sm: "px-4 py-2 text-sm",
+      md: "px-6 py-3 text-base",
+      lg: "px-8 py-4 text-lg",
+    };
+
     return (
-      <Link href={href} className={styles}>
+      <button
+        ref={ref}
+        className={cn(baseStyles, variants[variant], sizes[size], className)}
+        {...props}
+      >
         {children}
-      </Link>
+      </button>
     );
   }
-  
-  return (
-    <button className={styles} onClick={onClick}>
-      {children}
-    </button>
-  );
-}
+);
+
+Button.displayName = "Button";
+
+export { Button };
+export type { ButtonProps };

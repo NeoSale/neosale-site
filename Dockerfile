@@ -1,42 +1,52 @@
-# Estágio de build
-FROM node:20-alpine AS builder
+# Build stage
+FROM node:20-alpine AS base
 
-# Definir diretório de trabalho
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copiar arquivos de dependências
-COPY package.json package-lock.json ./
+# Copy package files
+COPY package.json package-lock.json* ./
 
-# Instalar dependências
+# Install dependencies
 RUN npm ci
 
-# Copiar o restante dos arquivos do projeto
+# Rebuild the source code only when needed
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Construir a aplicação
+# Build the application
 RUN npm run build
 
-# Estágio de produção
-FROM node:20-alpine AS runner
-
-# Definir variáveis de ambiente para produção
-ENV NODE_ENV=production
-
-# Definir diretório de trabalho
+# Production image, copy all the files and run next
+FROM base AS runner
 WORKDIR /app
 
-# Copiar arquivos necessários do estágio de build
-COPY --from=builder /app/package.json ./
-COPY --from=builder /app/package-lock.json ./
-COPY --from=builder /app/next.config.ts ./
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+
+# Copy public folder
 COPY --from=builder /app/public ./public
-COPY --from=builder /app/.next ./.next
 
-# Instalar apenas dependências de produção
-RUN npm ci --omit=dev
+# Set the correct permission for prerender cache
+RUN mkdir .next
+RUN chown nextjs:nodejs .next
 
-# Expor a porta que a aplicação usará
+# Automatically leverage output traces to reduce image size
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+USER nextjs
+
 EXPOSE 3000
 
-# Comando para iniciar a aplicação
-CMD ["npm", "start"]
+ENV PORT=3000
+ENV HOSTNAME="0.0.0.0"
+
+CMD ["node", "server.js"]
