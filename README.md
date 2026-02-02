@@ -1,87 +1,138 @@
-# NeoSale Site
+# 🌐 NeoSale Site
 
-Site institucional da NeoSale AI - Plataforma de automação de vendas e atendimento via WhatsApp com agentes de IA especializados.
+Marketing landing page e site institucional da plataforma NeoSale.
 
-## 🚀 Tecnologias
+**Versão:** 1.0.0 | **Status:** Ativo | **Stack:** Next.js 15 + React 19 + Tailwind CSS 4
 
-- **Framework:** Next.js 15 (App Router)
-- **UI:** React 19 + TypeScript
-- **Estilização:** Tailwind CSS 4
-- **Animações:** Framer Motion
-- **Ícones:** Lucide React
-- **Fontes:** Geist Sans (Google Fonts)
-- **Deploy:** Vercel
+## 🚀 Início Rápido
 
-## 📁 Estrutura
+### Pré-requisitos
+- Node.js 20+
+- npm 10+
 
-```
-neosale-site/
-├── src/
-│   ├── app/                    # App Router (Next.js 15)
-│   │   ├── layout.tsx          # Layout raiz
-│   │   ├── page.tsx            # Home (landing page)
-│   │   ├── contato/            # Página de contato
-│   │   ├── politica-de-privacidade/
-│   │   └── termos-de-uso/
-│   │
-│   ├── components/
-│   │   ├── layout/             # Header, Footer, ThemeToggle
-│   │   ├── sections/           # Seções da landing page
-│   │   └── ui/                 # Componentes reutilizáveis
-│   │
-│   ├── lib/                    # Utilitários
-│   └── styles/                 # Estilos globais
-│
-├── public/                     # Assets estáticos
-└── package.json
-```
-
-## 🎨 Design System
-
-### Cores
-- **Primary:** `#403CCF` (azul roxo)
-- **Primary Light:** `#5B59E8`
-- **Primary Dark:** `#2d2a9c`
-- **Background Light:** `#FBFAFF`
-- **Background Dark:** `#0f1629`
-
-### Componentes
-- `Button` - Botões com variantes (primary, secondary, outline, ghost)
-- `Card` - Cards com variantes (default, glass, bordered)
-- `Badge` - Badges para tags e status
-- `Container` - Container responsivo
-- `Accordion` - FAQ accordion animado
-- `SectionTitle` - Títulos de seção padronizados
-
-## 🛠️ Desenvolvimento
+### Instalação
 
 ```bash
-# Instalar dependências
 npm install
+```
 
-# Rodar em desenvolvimento
+### Desenvolvimento
+
+```bash
 npm run dev
+```
 
-# Build de produção
+Acesse `http://localhost:3000`
+
+### Build & Produção
+
+```bash
 npm run build
-
-# Iniciar produção
 npm start
 ```
 
-## 📱 Páginas
+## 📋 Scripts Disponíveis
 
-- `/` - Landing page principal
-- `/contato` - Formulário de contato
-- `/politica-de-privacidade` - Política LGPD
-- `/termos-de-uso` - Termos de uso
+| Comando | Descrição |
+|---------|-----------|
+| `npm run dev` | Inicia servidor de desenvolvimento |
+| `npm run build` | Build otimizado para produção |
+| `npm start` | Executa aplicação em produção |
+| `npm run lint` | ESLint - verificação de código |
 
-## 🔗 Links Importantes
+## 📁 Estrutura do Projeto
 
-- **Demo:** https://lp.neosaleai.com.br
-- **CRM:** https://crm.neosaleai.com.br
-- **Site:** https://neosaleai.com.br
+```
+src/
+├── app/                    # Next.js App Router
+│   ├── contato/           # Página de contato
+│   ├── politica-de-privacidade/
+│   ├── termos-de-uso/
+│   └── page.tsx           # Homepage
+├── components/
+│   ├── layout/            # Header, Footer, Navigation
+│   ├── sections/          # Hero, Features, CTA, etc
+│   └── ui/               # Componentes reutilizáveis
+├── lib/                   # Utilities e helpers
+├── styles/                # CSS global + Tailwind config
+└── public/                # Assets estáticos (imagens, fonts)
+```
 
-## 📄 Licença
+## 🎨 Recursos
 
-© 2025 NeoSale AI. Todos os direitos reservados.
+- ✅ **Responsivo** - Mobile-first design
+- ✅ **SEO Otimizado** - Metadata dinâmicas
+- ✅ **Animações** - Framer Motion
+- ✅ **Tema Customizado** - Cor primária: #403CCF (roxo)
+- ✅ **Acessibilidade** - WCAG 2.1 AA
+
+## 🔧 Configuração
+
+### Environment Variables
+
+Não há variáveis obrigatórias para desenvolvimento local.
+
+Para produção, veja [docs/ENVIRONMENT.md](docs/ENVIRONMENT.md)
+
+### Tailwind CSS
+
+Configuração customizada em `src/styles/tailwind.config.js`:
+- Tema primário: `#403CCF`
+- Dark mode: suportado via `dark:` classes
+- Breakpoints: padrão Tailwind
+
+## 📦 Dependências Principais
+
+- **next:** Framework React com App Router
+- **react/react-dom:** Versão 19
+- **framer-motion:** Animações fluidas
+- **tailwindcss:** Styling utilitário
+- **lucide-react:** Ícones vetoriais
+
+## 🚢 Deployment
+
+O projeto está pronto para deployment via:
+
+- **Vercel** (recomendado para Next.js)
+- **Docker** (veja [build-and-push.sh](../build-and-push.sh))
+- **EasyPanel** (com script de automação)
+
+### Deploy via Docker
+
+```bash
+npm run deploy        # Auto-detecta versão
+npm run deploy:patch  # Force patch version
+npm run deploy:minor  # Force minor version
+npm run deploy:major  # Force major version
+```
+
+Veja [DEPLOYMENT.md](docs/DEPLOYMENT.md) para mais detalhes.
+
+## 📚 Documentação
+
+- [SETUP.md](docs/SETUP.md) - Setup detalhado e troubleshooting
+- [PROJECT-STRUCTURE.md](docs/PROJECT-STRUCTURE.md) - Explicação da estrutura
+- [ENVIRONMENT.md](docs/ENVIRONMENT.md) - Variáveis de ambiente
+- [DEPLOYMENT.md](docs/DEPLOYMENT.md) - Guia de deploy
+
+## 🤝 Contribuindo
+
+1. Crie branch: `git checkout -b feature/minha-feature`
+2. Commit changes: `git commit -m 'feat: descrição'`
+3. Push: `git push origin feature/minha-feature`
+4. Abra Pull Request
+
+## 📝 Licença
+
+MIT - Veja LICENSE para detalhes
+
+## 📞 Suporte
+
+- **Issues:** GitHub Issues
+- **Email:** dev@neosale.io
+- **Docs:** [neosale-docs/](../neosale-docs)
+
+---
+
+**Mantido por:** Equipe NeoSale
+**Última atualização:** Fevereiro 2026
